@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowered LS12 | Women's Fitness & Strength Studio | Wortley, Leeds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e83e8c;
+            --primary-dark: #c2185b;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f8f9fa;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Header / Nav */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(18, 18, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 8% 80px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(232, 62, 140, 0.15) 0%, rgba(18, 18, 18, 1) 100%);
+        }
+
+        .badge {
+            background: rgba(232, 62, 140, 0.2);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 16px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 10px 25px rgba(232, 62, 140, 0.4);
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            padding: 80px 8%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Timetable / Classes */
+        .timetable {
+            padding: 80px 8%;
+            background: #181818;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+            background: var(--card-bg);
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Location & Footer */
+        .location {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .location-info {
+            margin-top: 20px;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0a0a0a;
+            border-top: 1px solid #222;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.1rem; }
+            .nav-links { display: none; }
+            .schedule-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">EMPOWERED <span>LS12</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+        <a href="https://wa.me/447000000000?text=Hi%20Empowered%20LS12,%20I'd%20like%20to%20book%20a%20free%20trial%20session!" class="cta-btn" style="padding: 10px 20px; font-size: 0.9rem;">Book Pass</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge">Women-Only Strength & Fitness Studio | Wortley, Leeds</span>
+        <h1>Stronger. Fitter. More Confident.</h1>
+        <p>Leeds' premier female-only strength community. From beginner powerlifting to high-energy group fitness—train in a supportive, intimidation-free environment.</p>
+        <a href="https://wa.me/447000000000?text=Hi%20Empowered%20LS12,%20I'd%20like%20to%20claim%20my%20Free%20Trial%20Pass!" class="cta-btn">
+            Claim Free First Session 💬
+        </a>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features" id="about">
+        <h2 class="section-title">Why Empowered LS12?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>100% Female Environment</h3>
+                <p>Train comfortably without the gym anxiety. Designed specifically for women of all ages and fitness levels.</p>
+            </div>
+            <div class="card">
+                <h3>Ladies That Lift</h3>
+                <p>Learn proper strength training and powerlifting form safely under expert female coaching.</p>
+            </div>
+            <div class="card">
+                <h3>Small Group Fitness</h3>
+                <p>Get personalized attention in every class with structured workouts designed for maximum results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes / Timetable -->
+    <section class="timetable" id="classes">
+        <h2 class="section-title">Popular Weekly Sessions</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="schedule-item">
+                <div>
+                    <strong>Ladies That Lift (Strength)</strong>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);">Barbell, Technique & Powerbuilding</div>
+                </div>
+                <span>Mon & Wed • 6:00 PM</span>
+            </div>
+            <div class="schedule-item">
+                <div>
+                    <strong>Empower Sweat (HIIT & Conditioning)</strong>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);">Full Body Burn & Cardio</div>
+                </div>
+                <span>Tue & Thu • 6:30 PM</span>
+            </div>
+            <div class="schedule-item">
+                <div>
+                    <strong>Weekend Strength & Coffee</strong>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);">Group Strength + Community Catchup</div>
+                </div>
+                <span>Saturday • 9:30 AM</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <h2 class="section-title">Find Us in Leeds</h2>
+        <p>Located convenient to Upper Wortley Road, Wortley, Leeds (LS12).</p>
+        <div class="location-info">
+            <p>📍 Upper Wortley Road, Wortley, Leeds, LS12</p>
+            <p>📩 Direct Enquiries: WhatsApp or Instagram DM (@empoweredls12)</p>
+        </div>
+        <div style="margin-top: 35px;">
+            <a href="https://wa.me/447000000000?text=Hi%20Empowered%20LS12,%20where%20are%20you%20located?" class="cta-btn">
+                Send Us a Message
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Empowered LS12 Women's Fitness Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
